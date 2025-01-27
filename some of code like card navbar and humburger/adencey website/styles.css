@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*NAV-BAR STYLES ARE HERE*/
+/*NAV-BAR STYLES ARE HERE*/
+/*NAV-BAR STYLES ARE HERE*/
+
+#nav-bar{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar{
+    background: rgb(0,167,36);
+background: linear-gradient(90deg, rgba(0,167,36,1) 16%, rgba(0,226,255,1) 87%);
+padding: 0;
+}
+
+.navbar-brand img{
+    height: 60px;
+    padding-left: 20;
+}
+
+.navbar-nav li{
+    padding: 0 10px;
+}
+
+.navbar-nav li a{
+    color: white !important;
+    font-weight: 600;
+    float: right;
+    text-align: left;
+}
+
+.navbar-toggler{
+    outline: none;
+}
+
+/*MAIN CODE STYLES ARE HERE*/
+/*MAIN CODE STYLES ARE HERE*/
+/*MAIN CODE STYLES ARE HERE*/

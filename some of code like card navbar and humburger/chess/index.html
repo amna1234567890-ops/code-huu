@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Chessboard</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Fullscreen Chessboard */
+        .chessboard {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            width: 500px;
+            height: 500px;
+            margin: auto;
+            box-shadow: 0.1px 0.1px 20px 0.1px;
+            margin-top: 20px;
+            margin-right: 350px;
+            
+        }
+
+        /* Black and White Box Styling */
+        .black {
+            background-color: #b58863;
+            color: rgb(175, 175, 175);
+            font-size: 50px;
+            
+            text-align: center;
+            line-height: 100%;
+        }
+
+        .white {
+            background-color: #f0d9b5;
+            color: black;
+            font-size: 50px;
+            
+            text-align: center;
+            line-height: 100%;
+        }
+
+        /* Styling each square */
+        .chessboard div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+        img{
+            height:200px;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="chessboard">
+        <!-- Row 1 -->
+       <!-- Row 7 -->
+       <div class="white">♟</div>
+       <div class="black">♟</div>
+       <div class="white">♟</div>
+       <div class="black">♟</div>
+       <div class="white">♟</div>
+       <div class="black">♟</div>
+       <div class="white">♟</div>
+       <div class="black">♟</div>
+       
+       <!-- Row 8 -->
+       <div class="black">♜</div>
+       <div class="white">♞</div>
+       <div class="black">♝</div>
+       <div class="white">♛</div>
+       <div class="black">♚</div>
+       <div class="white">♝</div>
+       <div class="black">♞</div>
+       <div class="white">♜</div>
+        
+        <!-- Empty Rows 3 and 4 -->
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        
+        <!-- Row 7 -->
+        <div class="white">♟</div>
+        <div class="black">♟</div>
+        <div class="white">♟</div>
+        <div class="black">♟</div>
+        <div class="white">♟</div>
+        <div class="black">♟</div>
+        <div class="white">♟</div>
+        <div class="black">♟</div>
+        
+        <!-- Row 8 -->
+        <div class="black">♜</div>
+        <div class="white">♞</div>
+        <div class="black">♝</div>
+        <div class="white">♛</div>
+        <div class="black">♚</div>
+        <div class="white">♝</div>
+        <div class="black">♞</div>
+        <div class="white">♜</div>
+    </div>
+    <div class="gif"><img src="https://i.pinimg.com/originals/5e/45/c3/5e45c3f6445fba750c3b4776c7a298fb.gif" alt=""></div>
+</body>
+</html>

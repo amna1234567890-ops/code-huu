@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Store</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.controls {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.controls button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.controls button:hover {
+    background-color: #45a049;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+.product {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product h2 {
+    font-size: 18px;
+}
+
+.product p {
+    font-size: 16px;
+    color: #555;
+}
+
+.product .price {
+    color: #E91E63;
+    font-size: 20px;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our E-Store</h1>
+        <div class="controls">
+            <button id="sortPrice">Sort by Price</button>
+            <button id="addProduct">Add Product</button>
+        </div>
+    </header>
+    
+    <main>
+        <div id="product-list" class="product-list">
+            <!-- Products will be displayed here -->
+        </div>
+    </main>
+
+    <script>const products = [
+        { name: 'Product 1', price: 20 },
+        { name: 'Product 2', price: 50 },
+        { name: 'Product 3', price: 15 },
+    ];
+    
+    function displayProducts(productArray) {
+        const productList = document.getElementById('product-list');
+        productList.innerHTML = ''; // Clear the list
+        productArray.forEach(product => {
+            const productDiv = document.createElement('div');
+            productDiv.className = 'product';
+            productDiv.innerHTML = `
+                <h2>${product.name}</h2>
+                <p class="price">$${product.price}</p>
+            `;
+            productList.appendChild(productDiv);
+        });
+    }
+    
+    // Sort products by price
+    document.getElementById('sortPrice').addEventListener('click', () => {
+        const sortedProducts = [...products].sort((a, b) => a.price - b.price);
+        displayProducts(sortedProducts);
+    });
+    
+    // Add a new product dynamically
+    document.getElementById('addProduct').addEventListener('click', () => {
+        const newProductName = prompt('Enter the product name:');
+        const newProductPrice = parseFloat(prompt('Enter the product price:'));
+        if (newProductName && !isNaN(newProductPrice)) {
+            products.push({ name: newProductName, price: newProductPrice });
+            displayProducts(products);
+        }
+    });
+    
+    // Display the initial products
+    displayProducts(products);
+    </script>
+</body>
+</html>

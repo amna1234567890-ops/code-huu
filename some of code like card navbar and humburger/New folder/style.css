@@ -1,0 +1,46 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Game Area Setup */
+#gameArea {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-color: #cce7ff;
+    overflow: hidden;
+    border: 2px solid #000;
+}
+
+/* Ball */
+#ball {
+    position: absolute;
+    bottom: 50px; /* Keep the ball above the ground */
+    left: 50px; /* Initial position of the ball */
+    width: 30px;
+    height: 30px;
+    background-color: #007ACC;
+    border-radius: 50%;
+}
+
+/* Road */
+#road {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #333;
+}
+
+/* Building */
+.building {
+    position: absolute;
+    bottom: 50px; /* Align buildings with the road */
+    width: 50px;
+    height: 100px;
+    background-color: #808080;
+    border: 1px solid #333;
+}

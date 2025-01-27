@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f3f3f3;
+        }
+        .quiz-container {
+            width: 100%;
+            max-width: 600px;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .question {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .options label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        .btn {
+            margin-top: 20px;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <h2>Simple HTML Quiz</h2>
+    <div id="quiz">
+        <div class="question" id="question">What does HTML stand for?</div>
+        <div class="options">
+            <label><input type="radio" name="answer" value="0"> Hyper Text Markup Language</label>
+            <label><input type="radio" name="answer" value="1"> Home Tool Markup Language</label>
+            <label><input type="radio" name="answer" value="2"> Hyperlinks and Text Markup Language</label>
+        </div>
+        <button class="btn" onclick="checkAnswer()">Submit Answer</button>
+    </div>
+    <div id="result" style="display:none; margin-top: 20px;"></div>
+</div>
+
+<script>
+    const correctAnswer = 0; // Set the index of the correct answer
+
+    function checkAnswer() {
+        const options = document.getElementsByName('answer');
+        let selectedValue;
+
+        for (const option of options) {
+            if (option.checked) {
+                selectedValue = option.value;
+                break;
+            }
+        }
+
+        const result = document.getElementById('result');
+        if (selectedValue == correctAnswer) {
+            result.innerHTML = "<p style='color: green;'>Correct! HTML stands for Hyper Text Markup Language.</p>";
+        } else {
+            result.innerHTML = "<p style='color: red;'>Incorrect. Try again!</p>";
+        }
+        result.style.display = "block";
+    }
+</script>
+
+</body>
+</html>
